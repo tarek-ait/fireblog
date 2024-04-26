@@ -7,7 +7,7 @@ import Vue2Editor from "vue2-editor";
 Vue.use(Vue2Editor);
 
 Vue.config.productionTip = false;
-
+// this is the version 2 
 new Vue({
   router,
   store,
