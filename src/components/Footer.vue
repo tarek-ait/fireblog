@@ -47,8 +47,7 @@
           twitter,
           youtube,
          instagram,
-         linkedin
-       
+         linkedin // handling our svgs into components which is more clear
       }
   }
   

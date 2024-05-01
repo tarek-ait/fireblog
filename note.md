@@ -5,7 +5,7 @@
 - the command npm run build for compilation
 - and the command npm run lit for fixing fils 
 
-# first day 
+# first 1 ( the setup , navigation bar and footer implementations ) 
 running through the repo folder and it contents 
 - creat a folder for the firebase implementation which has a firebaseInit.js file
 - we wan use a vue dependency to let us export svgs as components , it is just a personal preference
@@ -25,3 +25,52 @@ running through the repo folder and it contents
     - the styoing is just a css which can be easily done (skipped that part)
     - we must notice that we are using the svgs as components using the vue-svg-loader on the package.json file 
 }
+
+- working on the home page 
+  - the blogpost component 
+
+# day 2 ( the fire blog component )
+- starting in the day 3 where we will be creating the home page blog 
+- so we will make the blog post component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+the node modules have all the code and handleing the server dependencies  

@@ -15,7 +15,7 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes, // the history router adding in the dependencies when installing the application
 });
 
 export default router;

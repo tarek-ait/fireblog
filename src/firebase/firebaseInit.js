@@ -17,3 +17,6 @@ const firebaseConfig = {
 
   export{ timestamp };
   export default firebaseApp.firestore();
+
+
+  // adding the firebase configuration into our vue application  
