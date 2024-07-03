@@ -1,24 +1,24 @@
 <template>
-  <div class="blog-wrapper no-user shadow">
+  <div class="blog-wrapper  shadow" :class="{'no-user' : !this.$store.state.user}">
         <div class="blog-content" style="">
             <div class="div">
                 <h2 v-if="post.welcomeScreen">{{ post.title }}</h2>  <!-- we check if we are at the welcome page so called the hero section -->
-                <h2 v-else>{{ post.title }}</h2>
+                <h2 v-else>{{ post.blogTitle }}</h2>
                 <p v-if="post.welcomeScreen">{{  post.blogPost }}</p>
-                <p v-else class="content-preview">{{  post.blogPost }}</p>
-                <router-link class="link link-light" to="#" v-if="post.welcomeScreen">
+                <p v-else class="content-preview" v-html="post.blogHTML"></p>
+                <router-link class="link link-light" :to="{name : 'viewBlog' , params:{blogid: this.post.blogId}}" v-if="post.welcomeScreen">
                     Login/Register
                     <Arrow class="arrow arrow-light"></Arrow>
                 </router-link>
-                <router-link class="link link-dark" to="#" v-else>  
+                <router-link class="link link-dark" :to="{name : 'viewBlog' , params:{blogid: this.post.blogId}}" v-else>
                     View the Post
-                    <Arrow class="arrow"></Arrow>
+                    <Arrow class="arrow" style="color: black;"></Arrow>
                 </router-link>
             </div>
         </div>
         <div class="blog-photo">
                 <img v-if="post.welcomeScreen" :src="require(`../assets/blogPhotos/${post.photo}.jpg`)">
-                <img v-else :src="require(`../assets/blogPhotos/${post.blogCoverPhoto}.jpg`)">
+                <img v-else :src="post.blogCoverPhoto"  alt="">
         </div>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .blog-wrapper{
     display: flex;
@@ -112,6 +112,7 @@ export default {
     .blog-content{
         background-color: #303030;
         color: #fff;
+        padding: 70px;
     }
     .arrow{
         path{
