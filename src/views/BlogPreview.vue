@@ -3,6 +3,7 @@
     <h2 style="font-weight: bold;font-size: 32px;text-align: center; margin-top: 2rem;">This is your post</h2>
     <div class="container quillWrapper">
         <h2>{{ this.blogTitle }}</h2>
+        <h2>{{ this.blogTitle }}</h2>
         <img :src="this.blogCoverPhoto" alt="">
         <div class="post-content ql-editor" v-html="blogHTML"></div>
     </div>
@@ -21,7 +22,8 @@ export default {
         },
         blogCoverPhoto(){
             return this.$store.state.blogPhotoFileURL;
-        }
+        },
+        
     }
 }
 </script>

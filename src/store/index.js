@@ -117,6 +117,7 @@ export default new Vuex.Store({
             blogTitle : doc.data().blogTitle,
             blogDate : doc.data().date,
             blogCoverPhotoName : doc.data().blogCoverPhotoName,
+            postedBy : doc.data().postedBy
           };
           state.blogPosts.push(data); // we push the data to our array 
         }

@@ -116,7 +116,8 @@ export default {
                         blogCoverPhotoName : this.blogCoverPhotoName,
                         blogTitle : this.blogTitle,
                         profileId : this.profileId,
-                        date : timestamp
+                        date : timestamp,
+                        postedBy : this.$store.state.profileUserName,
                     })
                     await this.$store.dispatch("getPosts") // push the new post
                     this.loading = false;

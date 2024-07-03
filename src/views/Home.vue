@@ -43,7 +43,7 @@ export default {
     return {
       welcomeScreen:{
         title: "Welcome!",
-        blogPost: "Weekly blog articels with all things programming including HTML, CSS, Javascript and more,Register tofay to never miss the chance and the great opportunities here with us",
+        blogPost: "i just built that so my firends could post and to share thier thoughts here and also to sound cool, so if you got this link then you should post something, else i'll hang my self in my room and end my miserable life (please keep it be familyfriendly)",
         welcomeScreen: true,
         photo:"coding"
       }, 

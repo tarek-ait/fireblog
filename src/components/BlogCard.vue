@@ -11,7 +11,11 @@
     <img :src="post.blogCoverPhoto" > <!-- we get the image according to the post we deliver from the home page-->
     <div class="info">
         <h4>{{ post.blogTitle}} </h4> <!--we display the title of the bolg-->
-        <h6>Posted on {{ new Date(post.blogDate).toLocaleString('en-us',{dateStyle : "long"}) }}</h6>  <!-- we display the date of the blog -->
+        <div style="display: flex;align-items: center;justify-content: space-between;">
+            <h6>Posted on {{ new Date(post.blogDate).toLocaleString('en-us',{dateStyle : "long"}) }}</h6>
+            <h6>Posted By {{ post.postedBy }}</h6>  <!-- we display the date of the blog -->
+        </div>
+        
         <router-link class="link" :to="{name: 'viewBlog' , params: {blogid: this.post.blogId} }">
             View the link 
             <Arrow class="arrow" style="fill: black;color: black;"></Arrow>
